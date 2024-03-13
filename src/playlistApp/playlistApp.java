@@ -8,7 +8,7 @@ package playlistApp;
  *
  * @author joshm
  */
-public class DataStructAlgorithmsCA1 {
+public class playlistApp {
 
     /**
      * @param args the command line arguments
