@@ -13,7 +13,18 @@ public class playlistApp {
     /**
      * @param args the command line arguments
      */    public static void main(String[] args) {
-           //test commit 
+         
+           GUI myGUI = new GUI();
+           myGUI.setVisible(true);
+         
+           musicManager manager = new musicManager();
+           
+           Song song1 = new Song("Song Title 1", "Artist 1", "Genre A");
+           manager.addSongToLiked(song1);
+           
+           manager.moveLastLikedSongToGenrePlaylist();
+           
+           manager.printAllPlaylists();
     }
     
 }

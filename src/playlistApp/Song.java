@@ -9,10 +9,11 @@ package playlistApp;
  * @author joshm
  */
 public class Song {
-    private String title;
-    private String artist;
-    private String genre;
+    private String title; //song title
+    private String artist; //artist of song
+    private String genre; //song genre
     
+    //constructor initialises song with title, artist and genre
     public Song(String title, String artist, String genre){
         this.title = title;
         this.artist = artist;
@@ -32,6 +33,7 @@ public class Song {
         return genre;
     }
     
+    // a toString method to get and combine the songs details and print out as string
     @Override
     public String toString(){
         return title + " by " + artist + " [" +genre + "]";
