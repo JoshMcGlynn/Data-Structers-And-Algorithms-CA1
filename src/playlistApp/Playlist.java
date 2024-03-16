@@ -7,6 +7,9 @@ package playlistApp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.LinkedList;
+import java.util.Stack;
+import java.util.Queue;
+import javax.swing.JOptionPane;
 /**
  *
  * @author joshm
@@ -57,28 +60,6 @@ public class Playlist {
         return songs.size();
     }
     
-    //Gets the next song in the playlist, but first checks if repeat is enabled.
-    //If repeat is enabled, it returns the currently playing song.
-    //Otherwise, it returns the next song in the list.
-    public Song getNextSong(int currentSongIndex) {
-        if (isRepeat && currentSongIndex == songs.size() - 1) {
-            return songs.getFirst(); // Repeat the playlist from start
-        } else if (currentSongIndex < songs.size() - 1) {
-            return songs.get(currentSongIndex + 1); // Get the next song
-        }
-        return null; // End of playlist
-    }
-
-    //Gets the previous song in the playlist, once again checking if repeat is enabled
-    public Song getPreviousSong(int currentSongIndex) {
-        //check if current song is the first in the playlist and repeat is on
-        if (isRepeat && currentSongIndex == 0) {
-            return songs.getLast(); // Repeat the playlist from end
-        } else if (currentSongIndex > 0) {
-            return songs.get(currentSongIndex - 1); // Get the previous song
-        }
-        return null; // Start of playlist
-    }
     
     //searches for a song by title in the playlist 
     public Song searchSongByTitle(String title) {
@@ -98,7 +79,7 @@ public class Playlist {
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("Playalist: ").append(name).append("\n");
+        sb.append("Playlist: ").append(name).append("\n");
         for (Song song : songs){
             sb.append(song).append("\n");
         }

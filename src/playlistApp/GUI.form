@@ -24,65 +24,63 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="376" max="-2" attributes="0"/>
-              <Component id="titleLbl" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="exitBtn" min="-2" pref="73" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="removeAllSongsBtn" min="-2" pref="218" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Component id="numOfSongsBtn" min="-2" pref="218" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="likedSongsListLbl" max="32767" attributes="0"/>
                                       <Component id="songNameInputLbl" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="songNameTxtField" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="songNameTxtField" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
-                                  <Component id="likedSongsDisplayArea" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="moveLastSongBtn" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="removeAllSongsBtn" alignment="0" pref="218" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                      <Component id="songGenreInputLbl" min="-2" pref="102" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="playlist1Lbl" min="-2" pref="102" max="-2" attributes="0"/>
-                                          <Component id="playlist1DisplayArea" min="-2" max="-2" attributes="0"/>
-                                          <Component id="removeLastSongBtn" alignment="0" min="-2" pref="218" max="-2" attributes="0"/>
-                                          <Component id="moveLastSongBtn" alignment="0" min="-2" pref="218" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                      <Component id="songNameTxtField1" min="-2" pref="213" max="-2" attributes="0"/>
-                                  </Group>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="playlist1Lbl" min="-2" pref="102" max="-2" attributes="0"/>
+                                  <Component id="JScrollPane2" max="32767" attributes="0"/>
+                                  <Component id="removeRapSongBtn" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="songArtistTxtField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="songArtistInputLbl" min="-2" pref="102" max="-2" attributes="0"/>
+                                  <Component id="clearRapPlaylistBtn" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="numOfSongsBtn" min="-2" pref="218" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="playlist2Lbl" min="-2" pref="119" max="-2" attributes="0"/>
+                          <Component id="songGenreInputLbl" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="playlist2Lbl" min="-2" pref="119" max="-2" attributes="0"/>
-                                  <Component id="Playlist2DisplayArea" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="songGenreTxtField" min="-2" pref="219" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="addSongBtn" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                              <Component id="addSongBtn" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="clearJazzPlaylistBtn" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="removeJazzSongBtn" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JScrollPane1" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="repeatBtn" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="titleLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="310" max="-2" attributes="0"/>
+                      <Component id="exitBtn" min="-2" pref="90" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="129" max="32767" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -97,44 +95,52 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="songNameInputLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="songArtistInputLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="songGenreInputLbl" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="songNameTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="songArtistTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="songGenreTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="addSongBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="likedSongsListLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="playlist1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="playlist2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="songNameTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="songNameTxtField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="likedSongsListLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="playlist1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="playlist2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="Playlist2DisplayArea" max="32767" attributes="0"/>
-                          <Component id="likedSongsDisplayArea" max="32767" attributes="0"/>
-                          <Component id="playlist1DisplayArea" alignment="0" pref="245" max="32767" attributes="0"/>
+                          <Component id="JScrollPane1" max="32767" attributes="0"/>
+                          <Component id="jScrollPane" max="32767" attributes="0"/>
+                          <Component id="JScrollPane2" alignment="0" pref="245" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="numOfSongsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="removeLastSongBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="removeRapSongBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="removeJazzSongBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="repeatBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="removeAllSongsBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="clearRapPlaylistBtn" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="removeAllSongsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="moveLastSongBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="moveLastSongBtn" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                      <Component id="addSongBtn" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="clearJazzPlaylistBtn" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="53" max="32767" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -170,7 +176,7 @@
         <Property name="text" type="java.lang.String" value="Song Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="songGenreInputLbl">
+    <Component class="javax.swing.JLabel" name="songArtistInputLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="14" style="1"/>
@@ -178,7 +184,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Song Genre:"/>
+        <Property name="text" type="java.lang.String" value="Song Artist:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="addSongBtn">
@@ -213,7 +219,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Playlist 1"/>
+        <Property name="text" type="java.lang.String" value="Rap Playlist"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="playlist2Lbl">
@@ -224,17 +230,17 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Playlist 2"/>
+        <Property name="text" type="java.lang.String" value="Jazz Playlist"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="likedSongsDisplayArea">
+    <Container class="javax.swing.JScrollPane" name="jScrollPane">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="likedSongsDisplayArea">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -242,14 +248,14 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JScrollPane" name="Playlist2DisplayArea">
+    <Container class="javax.swing.JScrollPane" name="JScrollPane1">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea2">
+        <Component class="javax.swing.JTextArea" name="jazzPlaylistTxtArea">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -257,14 +263,14 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JScrollPane" name="playlist1DisplayArea">
+    <Container class="javax.swing.JScrollPane" name="JScrollPane2">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea3">
+        <Component class="javax.swing.JTextArea" name="rapPlaylistTxtArea">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -280,10 +286,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numOfSongsBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="removeLastSongBtn">
+    <Component class="javax.swing.JButton" name="removeRapSongBtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Remove Last Song"/>
+        <Property name="text" type="java.lang.String" value="Remove Song"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeRapSongBtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="removeAllSongsBtn">
       <Properties>
@@ -294,10 +303,61 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Move Last Song"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="songNameTxtField1">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="songNameTxtField1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moveLastSongBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="songArtistTxtField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="songArtistTxtFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="songGenreInputLbl">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Song Genre:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="songGenreTxtField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="songGenreTxtFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="repeatBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Repeat"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="repeatBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="removeJazzSongBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Remove Song"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeJazzSongBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="clearRapPlaylistBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Clear Rap Playlist"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearRapPlaylistBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="clearJazzPlaylistBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Clear Jazz Playlist"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearJazzPlaylistBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
