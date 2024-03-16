@@ -10,17 +10,19 @@ package playlistApp;
  */
 
 import javax.swing.JTextArea;
+import java.util.List;
 
 public class GUI extends javax.swing.JFrame {
+    //makes instance of musicManager class to pull methods from
     private musicManager musicManager = new musicManager();
     /**
      * Creates new form GUI
      */
     public GUI() {
         initComponents();
-        
     }
     
+    //updates the display area of liked songs when user adds a new song
     public void updateLikedSongs(){
         //clear text area
         likedSongsDisplayArea.setText("");
@@ -30,27 +32,44 @@ public class GUI extends javax.swing.JFrame {
         }
     }
     
+    //updates both rap and jazz playlists with their current songs
     public void updatePlaylists(){
-        rapPlaylistTxtArea.setText("");
+        rapPlaylistTxtArea.setText(""); //clear text areas first
         jazzPlaylistTxtArea.setText("");
         
+        //append songs in rap playlist to text area
         for (Song song : musicManager.getRapPlaylist()){
             rapPlaylistTxtArea.append(song.toString() + "\n");
         }
         
+        //append songs in jazz playlist to text area
         for (Song song : musicManager.getJazzPlaylist()){
             jazzPlaylistTxtArea.append(song.toString() + "\n");
         }
     }
     
+    //appends the number of songs in each playlist to their respective text areas
     private void updatePlaylistCounts(){
-        int rapCount = musicManager.getRapPlaylist().size();
+        int rapCount = musicManager.getRapPlaylist().size(); //gets number of songs in each playlist
         int jazzCount = musicManager.getJazzPlaylist().size();
         
+        //appends count to each respective playlist
         rapPlaylistTxtArea.append("\n Number of Songs: " + rapCount);
         jazzPlaylistTxtArea.append("\n Number of Songs: " + jazzCount);
     }
     
+    //displays search results in the liked songs display area
+    private void displaySearchResults(List<Song> searchResults){
+        likedSongsDisplayArea.setText(""); //clear display area first
+        if(searchResults.isEmpty()){
+            likedSongsDisplayArea.setText("No songs found.");  //display message if no songs are found
+        }else{
+            //append search result to display area
+            for (Song song : searchResults){
+                likedSongsDisplayArea.append(song.toString() + "\n");
+            }
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -77,7 +96,6 @@ public class GUI extends javax.swing.JFrame {
         rapPlaylistTxtArea = new javax.swing.JTextArea();
         numOfSongsBtn = new javax.swing.JButton();
         removeRapSongBtn = new javax.swing.JButton();
-        removeAllSongsBtn = new javax.swing.JButton();
         moveLastSongBtn = new javax.swing.JButton();
         songArtistTxtField = new javax.swing.JTextField();
         songGenreInputLbl = new javax.swing.JLabel();
@@ -86,6 +104,8 @@ public class GUI extends javax.swing.JFrame {
         removeJazzSongBtn = new javax.swing.JButton();
         clearRapPlaylistBtn = new javax.swing.JButton();
         clearJazzPlaylistBtn = new javax.swing.JButton();
+        searchBar = new javax.swing.JTextField();
+        searchBtn = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -159,8 +179,6 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        removeAllSongsBtn.setText("Remove All Songs");
-
         moveLastSongBtn.setText("Move Last Song");
         moveLastSongBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,13 +230,20 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        searchBtn.setText("Search");
+        searchBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(numOfSongsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,9 +254,7 @@ public class GUI extends javax.swing.JFrame {
                                         .addComponent(songNameInputLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jScrollPane)
                                         .addComponent(songNameTxtField))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(moveLastSongBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(removeAllSongsBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)))
+                                    .addComponent(moveLastSongBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(43, 43, 43)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(playlist1Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -256,9 +279,13 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(repeatBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
+                        .addGap(15, 15, 15)
+                        .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(searchBtn)
+                        .addGap(63, 63, 63)
                         .addComponent(titleLbl)
-                        .addGap(310, 310, 310)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
@@ -268,7 +295,9 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleLbl)
-                    .addComponent(exitBtn))
+                    .addComponent(exitBtn)
+                    .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchBtn))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(songNameInputLbl)
@@ -300,14 +329,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(repeatBtn))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(removeAllSongsBtn)
-                            .addComponent(clearRapPlaylistBtn))
-                        .addGap(18, 18, 18)
-                        .addComponent(moveLastSongBtn))
-                    .addComponent(clearJazzPlaylistBtn))
-                .addContainerGap(16, Short.MAX_VALUE))
+                    .addComponent(clearRapPlaylistBtn)
+                    .addComponent(clearJazzPlaylistBtn)
+                    .addComponent(moveLastSongBtn))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();
@@ -383,6 +408,15 @@ public class GUI extends javax.swing.JFrame {
         musicManager.clearJazzPlaylist();
         updatePlaylists();
     }//GEN-LAST:event_clearJazzPlaylistBtnActionPerformed
+
+    private void searchBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtnActionPerformed
+        // TODO add your handling code here:
+        String query = searchBar.getText().trim();  //trims extra white space as it was causing errors
+        if(!query.isEmpty()){
+            List<Song> searchResults = musicManager.searchSongs(query);
+            displaySearchResults(searchResults);
+        }
+    }//GEN-LAST:event_searchBtnActionPerformed
     
     /**
      * @param args the command line arguments
@@ -436,10 +470,11 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel playlist1Lbl;
     private javax.swing.JLabel playlist2Lbl;
     private javax.swing.JTextArea rapPlaylistTxtArea;
-    private javax.swing.JButton removeAllSongsBtn;
     private javax.swing.JButton removeJazzSongBtn;
     private javax.swing.JButton removeRapSongBtn;
     private javax.swing.JButton repeatBtn;
+    private javax.swing.JTextField searchBar;
+    private javax.swing.JToggleButton searchBtn;
     private javax.swing.JLabel songArtistInputLbl;
     private javax.swing.JTextField songArtistTxtField;
     private javax.swing.JLabel songGenreInputLbl;

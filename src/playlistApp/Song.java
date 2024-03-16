@@ -37,6 +37,12 @@ public class Song {
         return genre;
     }
     
+    //checks if the song matches the search query
+    public boolean matches(String query){
+        query = query.toLowerCase();
+        return title.toLowerCase().contains(query) || artist.toLowerCase().contains(query) || genre.toLowerCase().contains(query);  //searches all fields, title, artist and genre
+    }
+    
     // a toString method to get and combine the songs details and print out as string
     @Override
     public String toString(){

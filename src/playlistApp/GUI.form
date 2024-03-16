@@ -24,8 +24,8 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="numOfSongsBtn" min="-2" pref="218" max="-2" attributes="0"/>
@@ -37,10 +37,7 @@
                                       <Component id="jScrollPane" alignment="0" max="32767" attributes="0"/>
                                       <Component id="songNameTxtField" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="moveLastSongBtn" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="removeAllSongsBtn" alignment="0" pref="218" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="moveLastSongBtn" alignment="0" min="-2" pref="218" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -74,9 +71,13 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="searchBar" min="-2" pref="238" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="searchBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Component id="titleLbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="310" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="exitBtn" min="-2" pref="90" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -91,6 +92,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="titleLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="exitBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="searchBar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="searchBtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -130,17 +133,11 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="removeAllSongsBtn" min="-2" max="-2" attributes="0"/>
-                          <Component id="clearRapPlaylistBtn" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="moveLastSongBtn" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="clearRapPlaylistBtn" min="-2" max="-2" attributes="0"/>
                   <Component id="clearJazzPlaylistBtn" min="-2" max="-2" attributes="0"/>
+                  <Component id="moveLastSongBtn" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="16" max="32767" attributes="0"/>
+              <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -294,11 +291,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeRapSongBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="removeAllSongsBtn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Remove All Songs"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="moveLastSongBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Move Last Song"/>
@@ -358,6 +350,16 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearJazzPlaylistBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="searchBar">
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="searchBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
